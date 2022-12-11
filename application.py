@@ -5,8 +5,11 @@ application = Flask(__name__)
 
 @application.route('/')
 def hello_world():
-    mensagem = request.json
-    return mensagem
+    try:
+        mensagem = request.json
+        return mensagem
+    except:
+        return "Hello World"
 
 if __name__=='__main__':
     application.run()
