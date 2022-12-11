@@ -1,9 +1,12 @@
-from flask import Flask
-application = Flask(__name__)
+from flask import Flask, request
+import requests
 
-@application.route('/')
+app = Flask(__name__)
+
+@app.route('/')
 def hello_world():
-    return 'Hello World'
+    mensagem = request.json
+    return mensagem
 
 if __name__=='__main__':
-    application.run()
+    app.run()
