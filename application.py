@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 import requests
 
 application = Flask(__name__)
@@ -10,6 +10,7 @@ def hello_world():
 @application.route('/teste', methods=['POST'])
 def whats():
     mensagem = request.json
+    mensagem = f"Olá {mensagem['nome']}"
     return mensagem
 
 if __name__=='__main__':
