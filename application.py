@@ -7,10 +7,9 @@ application = Flask(__name__)
 def hello_world():
     return "Hello World"
 
-@application.route('/teste', methods=['POST'])
-def whats():
-    mensagem = request.json
-    return mensagem
+@application.route('/teste', methods=['GET'])
+def whats(mensagem2):
+    return mensagem2
 
 if __name__=='__main__':
     application.run()
