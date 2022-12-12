@@ -3,7 +3,7 @@ import sqlite3
 import requests
 
 application = Flask(__name__)
-conexao = sqlite3.connect('testes-aws.db')
+conexao = sqlite3.connect('/testes-aws.db')
 
 @application.route('/')
 def hello_world():
