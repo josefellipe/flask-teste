@@ -9,7 +9,7 @@ def hello_world():
 
 @application.route('/teste', methods=['GET'])
 def whats(mensagem2):
-    return mensagem2
+    return mensagem2['hub_challenge']
 
 if __name__=='__main__':
     application.run()
