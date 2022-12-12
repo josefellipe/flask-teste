@@ -10,7 +10,6 @@ def hello_world():
 @application.route('/teste', methods=['POST'])
 def whats():
     mensagem = request.json
-    mensagem = f"Olá {mensagem['nome']}"
     return mensagem
 
 if __name__=='__main__':
