@@ -5,11 +5,12 @@ application = Flask(__name__)
 
 @application.route('/')
 def hello_world():
-    try:
-        mensagem = request.json
-        return mensagem
-    except:
-        return "Hello World"
+    return "Hello World"
+
+@application.route('/teste', methods=['POST'])
+def whats():
+    mensagem = request.json
+    return mensagem
 
 if __name__=='__main__':
     application.run()
