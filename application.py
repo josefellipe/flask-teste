@@ -18,7 +18,7 @@ def whats():
     }
     body = { 
         "messaging_product": "whatsapp", 
-        "to": "", 
+        "to": "5551997613120", 
         "type": "template", 
         "template": { 
             "name": "hello_world", 
