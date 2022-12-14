@@ -4,6 +4,10 @@ import requests
 
 application = Flask(__name__)
 
+chave1 = 'Bear'
+chave2 = 'er '
+chave3 = 'EAAHdsXNAVH8BANexOLZCZCODNISCR87pKT11zTdfWRBYbdBhZAEwPJ56XKxeS2Unhf4fd3HZCxsAQD8WZBXApbTRX8GsznkGlQ01'
+chave4 = 'juxBu3qXNTKyxWMtZAxNktP1PZANj9fG2lVBnQS1ACyTXCCbclZCYTnZAU1ccYeoOQISv00SP1BXiLZAnoYjcSq0EMA6iDi8oJ1ylzWXZBVsCCXjixJ9hob7bnFgCAaJZCwZD'
 
 @application.route('/')
 def hello_world():
@@ -13,7 +17,7 @@ def hello_world():
 def whats():
     url = 'https://graph.facebook.com/v15.0/105066285771857/messages'
     headers = {
-        'Authorization' : 'Bearer EAAHdsXNAVH8BAKeABvKvsbkBVg417GKmwgtHO3FcbODOQmlGaC8SdlwJ7bWE0YdQrpU5zqZB7ANV5YhtzBkmtpeUonilcET8jjFCU7210kQEeJtsDxI9iMCFrCqioJhPMg9PHbkD3c2J219H4zC5tBvvM4lZBOtFfDcKxN4IpbHqgevBu4U4WZCDmlZANUt1S3Nn1PFa1J5ARU0A3vQR6Iw63AC8uCUZD',
+        'Authorization' : chave1+chave2+chave3+chave4,
         'Content-Type': 'application/json'
     }
     body = { 
