@@ -9,12 +9,12 @@ chave2 = 'er '
 chave3 = 'EAAHdsXNAVH8BANexOLZCZCODNISCR87pKT11zTdfWRBYbdBhZAEwPJ56XKxeS2Unhf4fd3HZCxsAQD8WZBXApbTRX8GsznkGlQ01'
 chave4 = 'juxBu3qXNTKyxWMtZAxNktP1PZANj9fG2lVBnQS1ACyTXCCbclZCYTnZAU1ccYeoOQISv00SP1BXiLZAnoYjcSq0EMA6iDi8oJ1ylzWXZBVsCCXjixJ9hob7bnFgCAaJZCwZD'
 
-@application.route('/')
+@application.route('/', methods=['GET'])
 def hello_world():
-    mensagem = request
+    mensagem = request.get_data()
     conexao = sqlite3.connect('testes-aws.db')  
     cursor = conexao.cursor()
-    comando = f'INSERT INTO retorno (mensagem) VALUES ("{mensagem.json()}")'
+    comando = f'INSERT INTO retorno (mensagem) VALUES ("{mensagem.json}")'
     cursor.execute(comando)
     conexao.commit()
     cursor.close()
