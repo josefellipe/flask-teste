@@ -28,10 +28,9 @@ def whats():
         } 
     }
     mensagem = requests.post(url=url, headers=headers, json=body)
-
     conexao = sqlite3.connect('testes-aws.db')  
     cursor = conexao.cursor()
-    comando = f'INSERT INTO retorno (mensagem) VALUES ("{mensagem}")'
+    comando = f'INSERT INTO retorno (mensagem) VALUES ("{mensagem.json()}")'
     cursor.execute(comando)
     conexao.commit()
     cursor.close()
