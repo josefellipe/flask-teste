@@ -9,7 +9,7 @@ application = Flask(__name__)
 def hello_world():
     return "Hello World"
 
-@application.route('/teste', methods=['GET'])
+@application.route('/teste')
 def whats():
     conexao = sqlite3.connect('testes-aws.db')
     mensagem = request.json
