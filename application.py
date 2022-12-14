@@ -3,7 +3,7 @@ import sqlite3
 import requests
 
 application = Flask(__name__)
-conexao = sqlite3.connect('/testes-aws.db')
+conexao = sqlite3.connect('testes-aws.db')
 
 @application.route('/')
 def hello_world():
@@ -13,9 +13,10 @@ def hello_world():
 def whats():
     mensagem = request.json
     cursor = conexao.cursor()
-    comando = f'INSERT INTO retorno (mensagem) values ("{mensagem}")'
-    cursor(comando)
+    comando = f'INSERT INTO retorno (mensagem) VALUES ("{mensagem}")'
+    cursor.execute(comando)
     conexao.commit()
+    cursor.close()
     return mensagem['hub_challenge']
 
 if __name__=='__main__':
