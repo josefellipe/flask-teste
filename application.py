@@ -11,7 +11,15 @@ chave4 = 'juxBu3qXNTKyxWMtZAxNktP1PZANj9fG2lVBnQS1ACyTXCCbclZCYTnZAU1ccYeoOQISv0
 
 @application.route('/')
 def hello_world():
-    return "Hello World"
+    mensagem = request
+    conexao = sqlite3.connect('testes-aws.db')  
+    cursor = conexao.cursor()
+    comando = f'INSERT INTO retorno (mensagem) VALUES ("{mensagem.json()}")'
+    cursor.execute(comando)
+    conexao.commit()
+    cursor.close()
+    conexao.close()
+    return mensagem
 
 @application.route('/teste')
 def whats():
