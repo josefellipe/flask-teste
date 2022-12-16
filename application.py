@@ -6,8 +6,8 @@ application = Flask(__name__)
 
 chave1 = 'Bear'
 chave2 = 'er '
-chave3 = 'EAAHdsXNAVH8BANexOLZCZCODNISCR87pKT11zTdfWRBYbdBhZAEwPJ56XKxeS2Unhf4fd3HZCxsAQD8WZBXApbTRX8GsznkGlQ01'
-chave4 = 'juxBu3qXNTKyxWMtZAxNktP1PZANj9fG2lVBnQS1ACyTXCCbclZCYTnZAU1ccYeoOQISv00SP1BXiLZAnoYjcSq0EMA6iDi8oJ1ylzWXZBVsCCXjixJ9hob7bnFgCAaJZCwZD'
+chave3 = 'EAAHdsXNAVH8BAPsvbNCBZA1oHYlkZAhivN60QNxbr068Gk0RMxJ9XhHDO8SHolX6XBcW9VkLrOVIpRP4p9J'
+chave4 = 'C7pbtLpSLj0JreKC0vcrRHyBsxPCqSEYs3Foiipn9syTGDtEnJ2F8uC7a4Eqycoa54XVt3Vz0ONig1xpqawO13juoVEC09nTvyFadUvKfc4pMFMgN21np3XGOQZAUxcgz2f3BPFUsGIZD'
 
 @application.route('/', methods=['GET'])
 def hello_world():
