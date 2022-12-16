@@ -47,7 +47,7 @@ def whats():
     conexao.commit()
     cursor.close()
     conexao.close()
-    return mensagem['hub_challenge']
+    return 'testeToken'
 
 @application.route('/consulta', methods=['GET'])
 def consultar():
